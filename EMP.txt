@@ -1,0 +1,75 @@
+SQL> create table EMP
+  2  (E_ID number(2),
+  3  ENAME varchar2(20),
+  4  DEPTNO number(4),
+  5  DEPTNAME varchar2(15),
+  6  GENDER varchar(3),
+  7  AGE number(3),
+  8  BASICSAL number(6));
+
+Table created.
+
+SQL> insert into EMP values
+  2  (1,
+  3  'Mahek',
+  4  10,
+  5  'IT',
+  6  'F',
+  7  25,
+  8  12000);
+
+1 row created.
+
+SQL> insert into EMP values
+  2  (2,
+  3  'Darshan',
+  4  20,
+  5  'Acoount',\
+  6  'M',
+  7  
+SQL> 
+SQL> insert into EMP values
+  2  (2,
+  3  'Darshan',
+  4  20,
+  5  'Account',
+  6  'M',
+  7  26,
+  8  24000);
+
+1 row created.
+
+SQL> insert into EMP values
+  2  (3,
+  3  'Krupa',
+  4  10,
+  5  'IT',
+  6  'F',
+  7  24,
+  8  30000);
+
+1 row created.
+
+SQL> insert into EMP values
+  2  (4,
+  3  'Rahul',
+  4  30,
+  5  'HR',
+  6  'M',
+  7  27,
+  8  28000);
+
+1 row created.
+
+SQL> insert into EMP values
+  2  (5,
+  3  'Keshvi',
+  4  20,
+  5  'Account',
+  6  'F',
+  7  25,
+  8  15000);
+
+1 row created.
+
+SQL> spool off
