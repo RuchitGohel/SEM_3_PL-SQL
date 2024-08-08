@@ -1,0 +1,36 @@
+SQL> create table EMP
+  2  (E_ID number(2),
+  3  ENAME varchar2(20),
+  4  DEPTNO number(4),
+  5  DEPTNAME varchar2(15),
+  6   GENDER varchar(3),
+  7  AGE number(3),
+  8  BASICSAL number(6));
+create table EMP
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object 
+
+
+SQL> connect RUCHIT_721
+ERROR:
+ORA-01005: null password given; logon denied 
+
+
+Warning: You are no longer connected to ORACLE.
+SQL> Connect RUCHIT_7212
+Connected.
+SQL> create table EMP
+  2  (E_ID number(2),
+  3  ENAME varchar2(20),
+  4  DEPTNO number(4),
+  5  DEPTNAME varchar2(15),
+  6   GENDER varchar(3),
+  7  AGE number(3),
+  8  BASICSAL number(6));
+
+Table created.
+
+SQL> insert into values
+  2  
+SQL> spool on

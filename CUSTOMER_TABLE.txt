@@ -1,0 +1,179 @@
+SQL> create table customer
+  2  (Cust_No varchar2(5),
+  3  Cust_Name varchar(10),
+  4  Address1 varchar(25),
+  5  City varchar (20),
+  6  Stete varchar(15),
+  7  Ph_No number(12));
+create table customer
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object 
+
+
+SQL> drop table customer;
+
+Table dropped.
+
+SQL> create table customer
+  2  (Cust_No varchar2(5),
+  3  Cust_Name varchar(10),
+  4  Address1 varchar(25),
+  5  City varchar (20),
+  6  Stete varchar(15),
+  7  Ph_No number(12));
+
+Table created.
+
+SQL> insert into customer values
+  2  (&Cust_No,
+  3  '&Cust_Name',
+  4  '&Address1',
+  5  '&City',
+  6  '&Stete',
+  7  &Ph_No);
+Enter value for cust_no: C1
+old   2: (&Cust_No,
+new   2: (C1,
+Enter value for cust_name: Priya
+old   3: '&Cust_Name',
+new   3: 'Priya',
+Enter value for address1: Ring Road
+old   4: '&Address1',
+new   4: 'Ring Road',
+Enter value for city: Ahmedabad
+old   5: '&City',
+new   5: 'Ahmedabad',
+Enter value for stete: Gujarat
+old   6: '&Stete',
+new   6: 'Gujarat',
+Enter value for ph_no: 8989878548
+old   7: &Ph_No)
+new   7: 8989878548)
+(C1,
+ *
+ERROR at line 2:
+ORA-00984: column not allowed here 
+
+
+SQL> insert into customer values
+  2  ('&Cust_No',
+  3  '&Cust_Name',
+  4  '&Address1',
+  5  '&City',
+  6  '&Stete',
+  7  &Ph_No);
+Enter value for cust_no: C1
+old   2: ('&Cust_No',
+new   2: ('C1',
+Enter value for cust_name: Priya
+old   3: '&Cust_Name',
+new   3: 'Priya',
+Enter value for address1: Ring Road
+old   4: '&Address1',
+new   4: 'Ring Road',
+Enter value for city: Ahmedabad
+old   5: '&City',
+new   5: 'Ahmedabad',
+Enter value for stete: Gujarat
+old   6: '&Stete',
+new   6: 'Gujarat',
+Enter value for ph_no: 8989878548
+old   7: &Ph_No)
+new   7: 8989878548)
+
+1 row created.
+
+SQL> /
+Enter value for cust_no: C2
+old   2: ('&Cust_No',
+new   2: ('C2',
+Enter value for cust_name: Puja
+old   3: '&Cust_Name',
+new   3: 'Puja',
+Enter value for address1: Lajpat Nagar
+old   4: '&Address1',
+new   4: 'Lajpat Nagar',
+Enter value for city: Banaras
+old   5: '&City',
+new   5: 'Banaras',
+Enter value for stete: UP
+old   6: '&Stete',
+new   6: 'UP',
+Enter value for ph_no: 7898456213
+old   7: &Ph_No)
+new   7: 7898456213)
+
+1 row created.
+
+SQL> /
+Enter value for cust_no: C3
+old   2: ('&Cust_No',
+new   2: ('C3',
+Enter value for cust_name: Ankit
+old   3: '&Cust_Name',
+new   3: 'Ankit',
+Enter value for address1: Borivali
+old   4: '&Address1',
+new   4: 'Borivali',
+Enter value for city: Mumbai
+old   5: '&City',
+new   5: 'Mumbai',
+Enter value for stete: Maharashtra
+old   6: '&Stete',
+new   6: 'Maharashtra',
+Enter value for ph_no: 7885984251
+old   7: &Ph_No)
+new   7: 7885984251)
+
+1 row created.
+
+SQL> /
+Enter value for cust_no: C4
+old   2: ('&Cust_No',
+new   2: ('C4',
+Enter value for cust_name: Ravi
+old   3: '&Cust_Name',
+new   3: 'Ravi',
+Enter value for address1: Vajdi Road
+old   4: '&Address1',
+new   4: 'Vajdi Road',
+Enter value for city: Delhi
+old   5: '&City',
+new   5: 'Delhi',
+Enter value for stete: Delhi
+old   6: '&Stete',
+new   6: 'Delhi',
+Enter value for ph_no: 7898452034
+old   7: &Ph_No)
+new   7: 7898452034)
+
+1 row created.
+
+SQL> /
+Enter value for cust_no: C5
+old   2: ('&Cust_No',
+new   2: ('C5',
+Enter value for cust_name: Alpa
+old   3: '&Cust_Name',
+new   3: 'Alpa',
+Enter value for address1: Jamnagar Road
+old   4: '&Address1',
+new   4: 'Jamnagar Road',
+Enter value for city: Ahmedabad
+old   5: '&City',
+new   5: 'Ahmedabad',
+Enter value for stete: Gujarat
+old   6: '&Stete',
+new   6: 'Gujarat',
+Enter value for ph_no: 7465241589
+old   7: &Ph_No)
+new   7: 7465241589)
+
+1 row created.
+
+SQL> commit;
+
+Commit complete.
+
+SQL> spool off

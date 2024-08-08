@@ -1,75 +1,168 @@
-SQL> create table EMP
-  2  (E_ID number(2),
-  3  ENAME varchar2(20),
-  4  DEPTNO number(4),
-  5  DEPTNAME varchar2(15),
-  6  GENDER varchar(3),
-  7  AGE number(3),
-  8  BASICSAL number(6));
+SQL> insert into EMP values
+  2  (&E_ID,
+  3  '&ENAME',
+  4  &DEPTNO,
+  5  '&GENDER',
+  6  &AGE,
+  7  &BASICSAL);
+Enter value for e_id: 1
+old   2: (&E_ID,
+new   2: (1,
+Enter value for ename: Mahek
+old   3: '&ENAME',
+new   3: 'Mahek',
+Enter value for deptno: 10
+old   4: &DEPTNO,
+new   4: 10,
+Enter value for gender: F
+old   5: '&GENDER',
+new   5: 'F',
+Enter value for age: 25
+old   6: &AGE,
+new   6: 25,
+Enter value for basicsal: 12000
+old   7: &BASICSAL)
+new   7: 12000)
+insert into EMP values
+            *
+ERROR at line 1:
+ORA-00947: not enough values 
 
-Table created.
 
 SQL> insert into EMP values
-  2  (1,
-  3  'Mahek',
-  4  10,
-  5  'IT',
-  6  'F',
-  7  25,
-  8  12000);
+  2  (&E_ID,
+  3  '&ENAME',
+  4  &DEPTNO,
+  5  '&DEPTNAME',
+  6  '&GENDER',
+  7  &AGE,
+  8  &BASICSAL);
+Enter value for e_id: 1
+old   2: (&E_ID,
+new   2: (1,
+Enter value for ename: Mahek
+old   3: '&ENAME',
+new   3: 'Mahek',
+Enter value for deptno: 10
+old   4: &DEPTNO,
+new   4: 10,
+Enter value for deptname: IT
+old   5: '&DEPTNAME',
+new   5: 'IT',
+Enter value for gender: F
+old   6: '&GENDER',
+new   6: 'F',
+Enter value for age: 25
+old   7: &AGE,
+new   7: 25,
+Enter value for basicsal: 12000
+old   8: &BASICSAL)
+new   8: 12000)
 
 1 row created.
 
-SQL> insert into EMP values
-  2  (2,
-  3  'Darshan',
-  4  20,
-  5  'Acoount',\
-  6  'M',
-  7  
-SQL> 
-SQL> insert into EMP values
-  2  (2,
-  3  'Darshan',
-  4  20,
-  5  'Account',
-  6  'M',
-  7  26,
-  8  24000);
+SQL> /
+Enter value for e_id: 2
+old   2: (&E_ID,
+new   2: (2,
+Enter value for ename: Darshan
+old   3: '&ENAME',
+new   3: 'Darshan',
+Enter value for deptno: 20
+old   4: &DEPTNO,
+new   4: 20,
+Enter value for deptname: Account
+old   5: '&DEPTNAME',
+new   5: 'Account',
+Enter value for gender: M
+old   6: '&GENDER',
+new   6: 'M',
+Enter value for age: 26
+old   7: &AGE,
+new   7: 26,
+Enter value for basicsal: 24000
+old   8: &BASICSAL)
+new   8: 24000)
 
 1 row created.
 
-SQL> insert into EMP values
-  2  (3,
-  3  'Krupa',
-  4  10,
-  5  'IT',
-  6  'F',
-  7  24,
-  8  30000);
+SQL> /
+Enter value for e_id: 3
+old   2: (&E_ID,
+new   2: (3,
+Enter value for ename: Krupa
+old   3: '&ENAME',
+new   3: 'Krupa',
+Enter value for deptno: 10
+old   4: &DEPTNO,
+new   4: 10,
+Enter value for deptname: IT
+old   5: '&DEPTNAME',
+new   5: 'IT',
+Enter value for gender: F
+old   6: '&GENDER',
+new   6: 'F',
+Enter value for age: 24
+old   7: &AGE,
+new   7: 24,
+Enter value for basicsal: 30000
+old   8: &BASICSAL)
+new   8: 30000)
 
 1 row created.
 
-SQL> insert into EMP values
-  2  (4,
-  3  'Rahul',
-  4  30,
-  5  'HR',
-  6  'M',
-  7  27,
-  8  28000);
+SQL> /
+Enter value for e_id: 4
+old   2: (&E_ID,
+new   2: (4,
+Enter value for ename: Rahul
+old   3: '&ENAME',
+new   3: 'Rahul',
+Enter value for deptno: 30
+old   4: &DEPTNO,
+new   4: 30,
+Enter value for deptname: HR
+old   5: '&DEPTNAME',
+new   5: 'HR',
+Enter value for gender: M
+old   6: '&GENDER',
+new   6: 'M',
+Enter value for age: 27
+old   7: &AGE,
+new   7: 27,
+Enter value for basicsal: 28000
+old   8: &BASICSAL)
+new   8: 28000)
 
 1 row created.
 
-SQL> insert into EMP values
-  2  (5,
-  3  'Keshvi',
-  4  20,
-  5  'Account',
-  6  'F',
-  7  25,
-  8  15000);
+SQL> /
+Enter value for e_id: 5
+old   2: (&E_ID,
+new   2: (5,
+Enter value for ename: keshvi
+old   3: '&ENAME',
+new   3: 'keshvi',
+Enter value for deptno: 20
+old   4: &DEPTNO,
+new   4: 20,
+Enter value for deptname: Account
+old   5: '&DEPTNAME',
+new   5: 'Account',
+Enter value for gender: F
+old   6: '&GENDER',
+new   6: 'F',
+Enter value for age: 25
+old   7: &AGE,
+new   7: 25,
+Enter value for basicsal: 15000
+old   8: &BASICSAL)
+new   8: 15000)
 
 1 row created.
+
+SQL> commit;
+
+Commit complete.
 
 SQL> spool off
